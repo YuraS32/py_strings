@@ -17,7 +17,7 @@ def count_vowels(text: str) -> int:
     s=list(text)
     k=0
     for i in s:
-        if (i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='y' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U' or i=='Y'):
+        if (i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='y' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U' or i=='Y' or i=='Ą' or i=="ą" or i=='Ę' or i=="ę" or i=='Ó' or i=="ó" ):
             k+=1
     return(k)
     pass
