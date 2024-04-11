@@ -1,10 +1,11 @@
 # pylint: disable=C0114
-
+import string
 def reverse(text: str) -> str:
     return (text[::-1])
     pass
 
 
+"""
 def first_to_upper(text: str) -> str:
     l=text.split()
     l1=[]
@@ -13,7 +14,21 @@ def first_to_upper(text: str) -> str:
     s=" ".join(l1)
     return(s)
     pass
+"""
 
+def first_to_upper(text: str) -> str:
+    l=list(text)
+    n=len(text)
+    for i in range(n):
+        if (i!=0 and l[i].isalpha()==1):
+            if l[i - 1] in string.punctuation or l[i-1] in string.whitespace:
+                l[i] = l[i].capitalize()
+        else:
+            if (i == 0 and l[i].isalpha() == 1):
+                l[i] = l[i].capitalize()
+
+    return ("".join(l))
+    pass
 
 def count_vowels(text: str) -> int:
     s=list(text)
